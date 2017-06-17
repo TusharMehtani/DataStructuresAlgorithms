@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(void){
+int i=10;
+int j=20;
+int *ptr;
+ptr = &i;
+printf("i is : %d\n",*ptr);
+printf("address of i is : %p\n",ptr);
+ptr=&j;
+printf("j is : %d\n",*ptr);
+printf("address of j is : %p\n",ptr);
+*ptr = 100;
+printf("j is : %d\n",*ptr);
+printf("address of j is : %p\n",ptr);
+}

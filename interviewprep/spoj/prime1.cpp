@@ -1,0 +1,21 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main(){
+int t,n,m;
+cin>>t;
+	for(int i=0;i<t;i++){
+		cin>>m;
+		cin>>n;
+		for(int j=m;j<=n;j++){
+			for(int k=2;k<=sqrt(j);k++){
+				if(j%k==0){
+					cout<<j<<"\n";
+				}
+			}
+		}	
+	}
+cin.get();
+return 0;
+}

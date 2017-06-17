@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+int* bubble_sort(int arr[],int size){
+int temp;
+int count=0;
+	for(int i=0;i<size;i++){
+		if(arr[i]>arr[i+1]){
+			temp = arr[i];
+			arr[i] = arr[i+1];
+			arr[i+1] = temp;
+			count++;
+		}
+	}
+if(count==0){
+	return arr;
+}
+else{
+	cout<<count;
+	return bubble_sort(arr,size);
+}
+}
+void show(int a[],int size){
+cout<<"\n";	
+	for(int i=0;i<size;i++){
+		cout<<a[i]<<"\t";
+	}
+}
+int main(){
+int arr[] = {5,1,4,2,8,3,10,9};
+int size = sizeof(arr)/sizeof(arr[0]);
+cout<<"input array: "<<"\n";
+show(arr,size);
+cout<<"\n";
+cout<<"size of input array: "<<size<<"\n";
+cout<<"sorted array: ";
+show(bubble_sort(arr,size),size);
+cout<<"\n";
+cin.get();
+return 0;
+}

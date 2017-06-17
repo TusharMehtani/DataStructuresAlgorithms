@@ -1,0 +1,89 @@
+
+class linkedlist{
+	private Node head;
+	
+	public linkedlist(Node head){
+		this.head = head;
+	}
+	
+	public Node gethead(){
+		return this.head;
+	}
+	
+	public void sethead(Node head){
+		this.head = head;
+	}
+	
+	public void deleteNode(int data){
+		Node n = this.head;
+		if(n.getdata()==data){
+			this.sethead(n.getnext());
+		}
+		else{
+			Node temp=null;
+			while(n.getdata()!=data){
+				temp = n;
+				n= n.getnext();	
+			}
+			temp.setnext(n.getnext());
+		}
+	}
+
+	public void print(){
+		Node n = this.head;
+		while(n!=null){
+			System.out.println(n.getdata());
+			n=n.getnext();
+		}
+	}
+}
+
+class Node{
+	private int data;
+	private Node next;
+
+	public Node(int data){
+		this.data = data;
+	}
+	public Node(int data,Node next){
+		this.data = data;
+		this.next = next;
+	}
+
+	public int getdata(){
+		return this.data;
+	}
+	public Node getnext(){
+		return this.next;
+	}
+
+	public void setdata(int data){
+		this.data = data;
+	}
+	public void setnext(Node next){
+		this.next = next;
+	}
+	
+	public String toString(){
+		return Integer.toString(this.getdata());
+	}
+}
+
+class Test{
+	public static void main(String[] args){
+		Node head = new Node(1);
+		linkedlist llist = new linkedlist(head);
+		Node second = new Node(2);	
+		head.setnext(second);
+		Node third = new Node(3);
+		second.setnext(third);
+		Node fourth = new Node(4);
+		third.setnext(fourth);
+		fourth.setnext(null);
+		llist.print();
+		System.out.println();
+		llist.deleteNode(3);
+		llist.print();
+		System.out.println();
+	}
+}
