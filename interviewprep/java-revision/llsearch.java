@@ -1,4 +1,4 @@
-//search for a given element x in a linked list. return true if ll conatins x, false othervise.
+//search for a given element x in a linked list(iterative). return true if ll conatins x, false othervise.
 
 class linkedlist{
 	private Node head;

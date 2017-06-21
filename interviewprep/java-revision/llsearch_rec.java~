@@ -1,0 +1,44 @@
+//search for a key in a linkedlist using recursion.
+
+class linkedlist{
+	private Node head;
+
+	public linkedlist(Node head){
+		this.head = head;
+	}
+
+	public Node getHead(){
+		return this.node;
+	}
+			
+	public void setHead(Node head){
+		this.head = head;
+	}
+
+}
+
+class Node{
+	private int data;
+	private Node next;
+
+	public Node(int data){
+		this.data = data;
+		this.next = next;
+	}
+
+	public int getData(){
+		return this.data;
+	}
+	public Node getNext(){
+		return this.next;
+	}
+
+	public void setData(int data){
+		this.data = data;
+	}
+	public void setNext(Node next){
+		this.next = next;
+	}
+}	
+
+

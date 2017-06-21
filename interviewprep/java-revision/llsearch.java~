@@ -24,8 +24,8 @@ class linkedlist{
 			else{
 				n=n.getnext();
 			}
-		return false;
 		}
+		return false;
 	}
 
 	public void print(){
