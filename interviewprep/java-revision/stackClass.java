@@ -12,6 +12,7 @@ class Test{
 		stack.push(4);
 		System.out.println(stack.empty());
 		System.out.println(stack.peek());
+		System.out.println(stack.search(4));
 		System.out.println(stack.pop());
 		System.out.println(stack.peek());
 		System.out.println(stack.pop());
